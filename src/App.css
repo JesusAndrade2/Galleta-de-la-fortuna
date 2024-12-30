@@ -21,6 +21,19 @@
 	text-shadow: 0 0 10px #424242ca;
 	margin: 0;
 	color: antiquewhite;
+
+	animation: colors 3s linear infinite alternate;
+}
+@keyframes colors {
+	20% {
+		color: aqua;
+	}
+	40% {
+		color: aquamarine;
+	}
+	60% {
+		color: rgb(136, 172, 143);
+	}
 }
 @media (min-width: 768px) {
 	.title {
@@ -57,6 +70,7 @@
 .card__quote {
 	font-size: 20px;
 	color: #b3c8c1;
+	animation: colors 3s linear infinite alternate;
 }
 .btn {
 	width: fit-content;
@@ -71,10 +85,22 @@
 	font-size: 13px;
 	font-weight: 600;
 	filter: drop-shadow(0 0 2em #61dafbaa);
+	animation: colorsBtn 3s linear infinite alternate;
 	&:hover {
 		border: 2px solid rgb(98, 98, 98);
 		box-shadow: 0 0 10px rgb(0, 0, 0);
 		backdrop-filter: blur(5px);
 		transition: 0.2s;
+	}
+}
+@keyframes colorsBtn {
+	20% {
+		border-color: aqua;
+	}
+	40% {
+		border-color: aquamarine;
+	}
+	60% {
+		border-color: #88ac8f;
 	}
 }
