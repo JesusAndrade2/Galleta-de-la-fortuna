@@ -17,12 +17,34 @@
 }
 .title {
 	font-size: 38px;
+	font-weight: 900;
 	text-align: center;
-	text-shadow: 0 0 10px #424242ca;
+	text-shadow: 0 0 10px #3526266b;
 	margin: 0;
 	color: antiquewhite;
+	background: linear-gradient(
+		90deg,
+		red,
+		orange,
+		yellow,
+		green,
+		blue,
+		indigo,
+		violet
+	);
+	background-size: 300%;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	animation: colorAnimation 3s ease-in-out infinite alternate;
+}
+@keyframes colorAnimation {
+	0% {
+		background-position: 0% 50%;
+	}
 
-	animation: colors 3s linear infinite alternate;
+	10% {
+		background-position: 100% 50%;
+	}
 }
 @keyframes colors {
 	20% {
@@ -32,7 +54,7 @@
 		color: aquamarine;
 	}
 	60% {
-		color: rgb(136, 172, 143);
+		color: #88ac8f;
 	}
 }
 @media (min-width: 768px) {
@@ -61,7 +83,7 @@
 	padding: 0 1.25;
 }
 .card__text {
-	color: rgb(52, 64, 90);
+	color: #34405a;
 	padding: 0 1.5em;
 	margin: 0;
 	font-weight: 700;
@@ -76,7 +98,7 @@
 	width: fit-content;
 	margin: 0 auto;
 	padding: 0.75em 2em;
-	background-color: rgba(240, 248, 255, 0.25);
+	background-color: #81a7c940;
 	border: 2px solid #fff;
 	-webkit-backdrop-filter: blur(5px);
 	backdrop-filter: blur(5px);
@@ -87,8 +109,8 @@
 	filter: drop-shadow(0 0 2em #61dafbaa);
 	animation: colorsBtn 3s linear infinite alternate;
 	&:hover {
-		border: 2px solid rgb(98, 98, 98);
-		box-shadow: 0 0 10px rgb(0, 0, 0);
+		border: 2px solid #626262;
+		box-shadow: 0 0 10px #000000;
 		backdrop-filter: blur(5px);
 		transition: 0.2s;
 	}
